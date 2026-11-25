@@ -842,21 +842,23 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "fastapi", extra = ["standard"] },
+    { name = "httpx" },
 ]
 
 [package.dev-dependencies]
 dev = [
-    { name = "httpx" },
     { name = "pytest" },
     { name = "ruff" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "fastapi", extras = ["standard", "standart"], specifier = ">=0.165.0" }]
+requires-dist = [
+    { name = "fastapi", extras = ["standard", "standart"], specifier = ">=0.165.0" },
+    { name = "httpx", specifier = ">=0.28.1" },
+]
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "httpx", specifier = ">=0.28.1" },
     { name = "pytest", specifier = ">=9.2.0" },
     { name = "ruff", specifier = ">=0.17.6" },
 ]
